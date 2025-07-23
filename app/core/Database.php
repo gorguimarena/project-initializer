@@ -1,6 +1,6 @@
 <?php
 
-namespace AppDAF\CORE;
+namespace DevNoKage;
 
 use PDO;
 

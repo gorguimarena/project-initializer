@@ -1,5 +1,5 @@
 <?php
-
+namespace DevNoKage\Interface;
 
 interface ISetterGetter {
     public function __set($name, $value);

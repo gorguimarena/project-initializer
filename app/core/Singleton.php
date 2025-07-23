@@ -1,5 +1,5 @@
 <?php
-namespace AppDAF\CORE;
+namespace DevNoKage;
 
 class Singleton {
     private static array $instances = [];

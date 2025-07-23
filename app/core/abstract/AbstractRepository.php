@@ -1,7 +1,7 @@
 <?php
-namespace AppDAF\ABSTRACT;
+namespace DevNoKage\Abstract;
 
-use AppDAF\CORE\Singleton;
+use DevNoKage\Singleton;
 
 class AbstractRepository extends Singleton{
     

@@ -1,7 +1,7 @@
 <?php
-namespace AppDAF\ABSTRACT;
+namespace DevNoKage\Abstract;
 
-use AppDAF\CORE\SetterGetter;
+use DevNoKage\SetterGetter;
 
 abstract class AbstractEntity extends SetterGetter
 {

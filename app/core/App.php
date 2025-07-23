@@ -1,8 +1,9 @@
 <?php
 
-namespace AppDAF\CORE;
+namespace DevNoKage;
 
-use AppDAF\ENUM\ClassName;
+use DevNoKage\Enums\ClassName;
+use Symfony\Component\Yaml\Yaml;
 
 class App
 {
@@ -11,7 +12,7 @@ class App
 
     public static function getDependencie(ClassName $className): mixed
     {
-        self::$dependencies = yaml_parse_file(SERVICES_PATH);
+        self::$dependencies = Yaml::parseFile(SERVICES_PATH);
 
         if (!array_key_exists($className->value, self::$dependencies)) {
             throw new \Exception("La dépendance {$className->value} est introuvable.");

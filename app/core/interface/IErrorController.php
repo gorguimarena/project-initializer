@@ -1,4 +1,5 @@
 <?php
+namespace DevNoKage\Interface;
 
 interface IErrorController {
     public function _404() : void;

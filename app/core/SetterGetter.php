@@ -1,5 +1,5 @@
 <?php
-namespace AppDAF\CORE;
+namespace DevNoKage;
 
 use Exception;
 

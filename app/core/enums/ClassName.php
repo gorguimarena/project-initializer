@@ -1,4 +1,5 @@
 <?php
+namespace DevNoKage\Enums;
 
 enum ClassName: string {
     case APP = "APP";

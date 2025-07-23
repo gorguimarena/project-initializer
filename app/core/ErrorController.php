@@ -1,8 +1,8 @@
 <?php
 
-namespace AppDAF\CORE;
+namespace DevNoKage;
 
-use AppDAF\ABSTRACT\AbstractController;
+use DevNoKage\Abstract\AbstractController;
 
 class ErrorController extends AbstractController
 {

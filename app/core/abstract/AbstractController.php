@@ -1,19 +1,7 @@
 <?php
 
-namespace AppDAF\ABSTRACT;
+namespace DevNoKage\Abstract;
 
-use AppDAF\CORE\Singleton;
-use AppDAF\ENTITY\ResponseEntity;
+use DevNoKage\Singleton;
 
-abstract class AbstractController extends Singleton
-{
-
-    protected function renderJson(ResponseEntity $response): void
-    {
-        http_response_code(201);
-
-        header('Content-Type: application/json');
-
-        echo $response->toJson();
-    }
-}
+abstract class AbstractController extends Singleton {}

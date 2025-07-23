@@ -1,6 +1,8 @@
 <?php
 
-namespace AppDAF\CORE;
+namespace DevNoKage;
+
+use DevNoKage\Enums\KeyRoute;
 
 class Router
 {
@@ -27,7 +29,6 @@ class Router
                 if (isset($info[KeyRoute::MIDDLEWARE->value]) && is_array($info[KeyRoute::MIDDLEWARE->value])) {
                     foreach ($info[KeyRoute::MIDDLEWARE->value] as $middlewareClass) {
                         if (class_exists($middlewareClass) && method_exists($middlewareClass, '__invoke')) {
-                            
                             $middleware = new $middlewareClass();
                             $middleware();
                         }
