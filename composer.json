@@ -1,13 +1,20 @@
 {
     "name": "dev-no-kage/project-initializer",
-    "description": "Un projet PHP structuré avec app/core et architecture MVC minimaliste",
+    "description": "Projet PHP structuré avec une architecture MVC minimaliste et gestion de dépendances via YAML.",
     "type": "project",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Gorgui Maréna : DevnoKage",
+            "email": "gorguimarena@gmail.com",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "DevNoKage\\Abstract\\": "app/core/abstract/",
             "DevNoKage\\Enums\\": "app/core/enums/",
-            "DevNoKage\\Interface\\": "app/core/interface/",
+            "DevNoKage\\Interface\\": "app/core/Interfaces/",
             "DevNoKage\\": "app/core/"
         },
         "files": [
@@ -26,5 +33,15 @@
         "test": "phpunit"
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "keywords": [
+        "php",
+        "mvc",
+        "yaml",
+        "dependency-injection",
+        "framework",
+        "lightweight",
+        "bootstrap",
+        "starter"
+    ]
 }

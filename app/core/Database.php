@@ -13,14 +13,16 @@ class Database extends Singleton
         PDO::ATTR_EMULATE_PREPARES => false
     ];
 
-    public function __construct()
+    public function __construct(string $driver, string $host, $db_port, string $db_name, string $db_user, string $db_password)
     {
+
+        dd($db_password);
         try {
-            $dsn = DB_DRIVE . ':host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME;
+            $dsn = $driver . ':host=' . $host . ';port=' . $db_port . ';dbname=' . $db_name;
             $this->pdo = new PDO(
                 $dsn,
-                DB_USER,
-                DB_PASSWORD,
+                $db_user,
+                $db_password,
                 self::$configDefault
             );
         } catch (\PDOException $e) {

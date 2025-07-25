@@ -8,4 +8,5 @@ enum ClassName: string {
     case ROUTER = "ROUTER";
     case SETTER_GETTER = "SETTER_GETTER";
     case SINGLETON = "SINGLETON";
+
 }
