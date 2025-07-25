@@ -20,13 +20,21 @@ project-root/
 ├── app/
 
 │ ├── config/ # fichiers YAML, .env, helpers
+
 │ └── core/ # cœur du framework
-│ ├── abstract/
-│ ├── enums/
-│ └── interface/
+
+│ ├── abstract/ # Les classes abstract reutilisable
+
+│ ├── enums/ # Les enumerations pour les clé du routeur et classes du fichier services.yml
+
+│ └── interface/ # les interface pour les contracts de methodes 
+
 ├── public/ # point d'entrée (index.php)
+
 ├── src/ # la ou sera vos entity, controller, repository
+
 ├── composer.json
+
 └── README.md
 
 
@@ -41,14 +49,16 @@ project-root/
 
 **Creer un projet :**
     ```bash
+
     composer create-project dev-no-kage/project-initializer nom-du-projet
+    
     cd project-initializer
 
-2. Installer les dépendances :
+2. Installer les dépendances  : 
      composer install
-3. Créer votre fichier .env : 
+3. Créer votre fichier .env  :  
     cp app/config/.env.example .env
-4. Démarrer un serveur local :
+4. Démarrer un serveur local  : 
     php -S localhost:8000 -t public
 
 🧠 Comment ça marche ?
@@ -69,8 +79,11 @@ C’est ici que tu déclares tous les services (classes) nécessaires à l’app
 
 
 CLE_UNIQUE:
+
   class: Namespace\De\La\Classe
+
   argument: [Liste, Des, Dépendances]
+
 CLE_UNIQUE : identifiant du service (doit exister dans l’énum ClassName de app/core)
 
 class : nom complet de la classe avec son namespace
@@ -91,35 +104,55 @@ Les arguments peuvent être de différents types :
 ✅ Injection sans dépendance
 
 DATABASE:
+
   class: DevNoKage\Core\Database
+
   argument: []
+
 ✅ Injection d’un service
 
 AUTH:
+
   class: DevNoKage\Core\ClassAuth
+
   argument:
+
     - "@DATABASE"
 
 
 ✅ Injection de valeurs littérales
 
 DATABASE:
+
   class: DevNoKage\Core\Database
+
   argument:
+
     - "driver"
+
     - "localhost"
+
     - "5432"
+
     - "dbname"
+
 
 
 ✅ Injection de variables d’environnement
 
 DATABASE:
+
   class: DevNoKage\Core\Database
+  
   argument:
+
     - "%DB_DRIVER%"
+
     - "%DB_HOST%"
+
     - "%DB_PORT%"
+
     - "%DB_NAME%"
+
 📂 Fichier concerné : services.yml
 Déclare toutes tes classes et dépendances dans app/config/services.yml.
