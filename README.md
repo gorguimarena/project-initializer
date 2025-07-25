@@ -16,16 +16,16 @@
 ## 📁 Structure du projet
 
 project-root/
+
 ├── app/
+
 │ ├── config/ # fichiers YAML, .env, helpers
-│ ├── controller/ # contrôleurs
-│ ├── model/ # modèles
-│ ├── view/ # vues
 │ └── core/ # cœur du framework
 │ ├── abstract/
 │ ├── enums/
 │ └── interface/
 ├── public/ # point d'entrée (index.php)
+├── src/ # la ou sera vos entity, controller, repository
 ├── composer.json
 └── README.md
 
@@ -36,11 +36,14 @@ project-root/
 
 1. **Cloner le dépôt :**
    ```bash
-   git clone https://github.com/dev-no-kage/project-initializer.git
-
-   composer create-project dev-no-kage/project-initializer nom-du-projet
-
+   git clone https://github.com/gorguimarena/project-initializer.git
    cd project-initializer
+
+**Creer un projet :**
+    ```bash
+    composer create-project dev-no-kage/project-initializer nom-du-projet
+    cd project-initializer
+
 2. Installer les dépendances :
      composer install
 3. Créer votre fichier .env : 
@@ -63,9 +66,8 @@ Le projet utilise un système simple mais puissant d’injection de dépendances
 C’est ici que tu déclares tous les services (classes) nécessaires à l’application, avec leurs dépendances.
 
 🧱 Structure d’un service
-yaml
-Copy
-Edit
+
+
 CLE_UNIQUE:
   class: Namespace\De\La\Classe
   argument: [Liste, Des, Dépendances]
