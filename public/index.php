@@ -1,6 +1,6 @@
 <?php
 
-use AppDAF\CORE\Router;
+use DevNoKage\Router;
 
 require_once '../app/config/bootstrap.php';
 
