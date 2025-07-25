@@ -4,7 +4,7 @@
 
 ## 🚀 Fonctionnalités
 
-- 🔧 Architecture **MVC** minimaliste (`app/controller`, `app/model`, `app/view`)
+- 🔧 Architecture : Le projet suit une structure modulaire claire inspirée des principes DDD (Domain-Driven Design) et du découplage logique du code métier, plutôt qu’un simple MVC.
 - ⚙️ **Injection de dépendances** basée sur YAML (`app/config/services.yaml`)
 - 🔐 Chargement de configuration via **DotEnv**
 - 🧩 Autoload PSR-4 conforme via Composer
