@@ -3,7 +3,6 @@
 namespace DevNoKage;
 
 use DevNoKage\Abstract\AbstractController;
-use DevNoKage\Enums\ClassName;
 
 class ErrorController extends AbstractController
 {
