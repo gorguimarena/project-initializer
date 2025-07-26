@@ -85,11 +85,8 @@ Le projet repose sur un conteneur de services défini dans app/config/services.y
 Exemple de définition :
 
 MaClasse:
-
   class: App\Service\MaClasse
-
   argument:
-
     - App\Repository\AutreClasse
 
 ⚙️ Moteur d’injection interne
@@ -109,15 +106,11 @@ Les dépendances sont injectées automatiquement par le moteur
 
 
 CLE_UNIQUE:
-
   class: Namespace\De\La\Classe
-
   argument: [Liste, Des, Dépendances]
 
 CLE_UNIQUE : identifiant du service (doit exister dans l’énum ClassName de app/core)
-
 class : nom complet de la classe avec son namespace
-
 argument : liste des arguments nécessaires au constructeur
 
 2. Syntaxe des arguments dans argument
