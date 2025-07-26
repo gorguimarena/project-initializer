@@ -1,5 +1,5 @@
 ERROR_CONTROLLER:
-  class: 
+  class: DevNoKage\ErrorController
   argument : []
 DATABASE: 
   class: DevNoKage\Database

@@ -7,12 +7,13 @@ use Symfony\Component\Yaml\Yaml;
 
 class App
 {
-
-    private static array $dependencies;
+    private static ?array $dependencies = null;
 
     public static function getDependencie(ClassName $className): mixed
     {
-        self::$dependencies = Yaml::parseFile(SERVICES_PATH);
+        if (self::$dependencies === null) {
+            self::$dependencies = Yaml::parseFile(SERVICES_PATH);
+        }
 
         if (!array_key_exists($className->value, self::$dependencies)) {
             throw new \Exception("La dépendance '{$className->value}' est introuvable dans services.yml.");
